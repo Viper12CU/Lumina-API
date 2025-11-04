@@ -10,10 +10,10 @@ const translateText = async (frase) => {
     params.append("target_language", "es");
 
     try {
-        const respuesta = await fetch(process.env.TRANSLATOR_API_URL || "https://text-translator2.p.rapidapi.com/translate", {
+        const respuesta = await fetch(process.env.TRANSLATOR_API_URL || "", {
             method: "POST",
             headers: {
-                'x-rapidapi-key': process.env.TRANSLATOR_API_KEY || '0cc2a319e9msh98633933bbdf04cp1e5c32jsnef8d8b87d6a5',
+                'x-rapidapi-key': process.env.TRANSLATOR_API_KEY || '',
                 'x-rapidapi-host': 'text-translator2.p.rapidapi.com',
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
